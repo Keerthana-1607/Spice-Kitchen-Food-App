@@ -5,8 +5,6 @@ const Experience = () => {
     <section className="experience-section" id="experience">
       
       <div className="experience-container">
-
-        {/* LEFT CONTENT */}
         <div className="experience-content">
 
           <span className="experience-subtitle">Our Story</span>
@@ -38,8 +36,6 @@ const Experience = () => {
 
           </div>
         </div>
-
-        {/* RIGHT IMAGE */}
         <img
           src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&h=600&fit=crop"
           alt="Chef Arjun Kapoor"
