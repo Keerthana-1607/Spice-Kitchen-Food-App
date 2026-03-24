@@ -39,8 +39,6 @@ const Header =({cartList=[]})=>{
                     <button className='book-table-btn' onClick={() => setShowPopup(true)}>
                         Book a Table
                     </button>
-
-                    {/* Cart Icon */}
                     <div className="cart-icon" onClick={() => navigate("/cart")}>
                         <FaShoppingCart size={24} />
                         {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
