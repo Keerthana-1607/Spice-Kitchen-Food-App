@@ -1,46 +1,32 @@
-/* Card */
 .menu-card {
     background-color: #1a1a1a;
     border-radius: 12px;
     overflow: hidden;
     width:100%;
     max-width:260px;
-    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
-
-/* Hover effect */
 .menu-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
-
-/* Image */
 .menu-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-
-/* Content */
 .menu-content {
     padding: 15px;
     text-align:center;
 }
-
-/* Dish Name */
 .dish-name {
     font-size: 18px;
     margin-bottom: 8px;
 }
-
-/* Price */
 .price {
     color: orange;
     margin-bottom: 12px;
     font-weight:bold;
 }
-
-/* Button */
 .order-btn {
     background-color: orange;
     border: none;
@@ -49,13 +35,10 @@
     cursor: pointer;
     transition: 0.3s ease;
 }
-
-/* Button Hover */
 .order-btn:hover {
     background-color: darkorange;
     transform: scale(1.05);
 }
-
 .qty-container {
     display: flex;
     align-items: center;
@@ -87,9 +70,8 @@
 }
 @media screen and (max-width: 480px) {
     .menu-card {
-        max-width: 100%;   /* full width */
+        max-width: 100%;  
     }
-
     .menu-image {
         height: 160px;
     }
