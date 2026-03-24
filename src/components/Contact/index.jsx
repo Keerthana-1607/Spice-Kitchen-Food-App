@@ -1,5 +1,4 @@
 import './index.css'
-// import { Facebook, Instagram, Twitter } from "lucide-react";
 import { FaFacebook, FaInstagram, FaTwitter, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 const Contact=()=>{
     return(
@@ -53,8 +52,6 @@ const Contact=()=>{
                     </div>
 
                 </div>
-
-                {/* Bottom */}
                 <div className="footer-bottom">
                     <p>© 2026 SpiceKitchen. All rights reserved.</p>
                 </div>
