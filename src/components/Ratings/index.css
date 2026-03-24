@@ -1,0 +1,19 @@
+/* Container */
+.reviews-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;   /* 🔥 scroll enabled */
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar (optional) */
+.reviews-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Cards */
+.review-card {
+    min-width: 280px;   /* 🔥 important for scroll */
+    flex-shrink: 0;
+}

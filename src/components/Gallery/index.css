@@ -1,0 +1,69 @@
+/* ===== Gallery Section ===== */
+.gallery-section{
+    padding: 60px 20px;
+    background-color: #111; 
+    color: #fff;
+    text-align: center;
+    margin-bottom:20px;
+}
+
+/* Heading styles */
+.gallery-section span {
+    color: orange;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.gallery-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.gallery-section p {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Gallery grid */
+.gallery-section div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Image styling */
+.gallery-section img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.gallery-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 165, 0, 0.5); /* soft orange glow */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .gallery-section div:nth-child(2) img {
+        height: 200px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery-section div:nth-child(2) img {
+        height: 250px;
+    }
+}

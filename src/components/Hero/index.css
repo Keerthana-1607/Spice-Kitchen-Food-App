@@ -1,0 +1,124 @@
+/* Base (Mobile First) */
+.hero-section {
+    display: flex;
+    flex-direction: column;   /* 🔥 mobile: column */
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #111;
+    color: white;
+    gap: 30px;
+}
+
+/* Left Content */
+.hero-content {
+    text-align: center;
+}
+
+.hero-subtitle {
+    color: orange;
+    font-size: 16px;
+}
+
+.hero-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.highlight {
+    color: orange;
+}
+
+.hero-description {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: orange;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+/* Image */
+.hero-img-container {
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 20px;   /* makes rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);  /* shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius:10%;
+    
+}
+
+/* 📱 Tablet (≥768px) */
+@media screen and (min-width: 768px) {
+    .hero-section {
+        flex-direction: row;   /* 🔥 side by side */
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px;
+    }
+
+    .hero-content {
+        width: 50%;
+        text-align: left;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        justify-content: flex-start;
+    }
+
+    .hero-img-container {
+        width: 45%;
+    }
+}
+
+/* 💻 Laptop (≥1024px) */
+@media screen and (min-width: 1024px) {
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+}
+
+
+/* hover effect */
+.hero-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}

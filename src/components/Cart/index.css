@@ -1,0 +1,106 @@
+/* Cart Container */
+.cart-container {
+    margin-top: 40px;
+    padding: 20px;
+    background: #1e1e1e; /* dark gray background */
+    color: white;
+    border-radius: 12px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Cart Heading */
+.cart-container h2 {
+    color: orange;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Individual Cart Item */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #2a2a2a; /* slightly lighter dark for contrast */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for card */
+.cart-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* Image */
+.cart-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* Details */
+.cart-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Dish Name */
+.cart-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Quantity & Price */
+.cart-details p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .cart-item {
+        gap: 15px;
+        padding: 12px;
+    }
+
+    .cart-img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .cart-img {
+        width: 100%;
+        height: 200px;
+        border-radius: 12px;
+    }
+
+    .cart-details {
+        width: 100%;
+    }
+
+    .cart-details p {
+        font-size: 15px;
+    }
+}

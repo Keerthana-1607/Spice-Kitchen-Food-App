@@ -1,0 +1,46 @@
+/* Section */
+.menu-section {
+    padding: 50px 20px;
+    background-color: #111;
+    /* background-color: white; */
+    color: white;
+    text-align: center;
+    margin-bottom:30px;
+}
+
+/* Title */
+.menu-section span {
+    color: orange;
+    font-size: 16px;
+}
+
+.menu-section h2 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.menu-section p {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.menu-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .menu-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+    .menu-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
