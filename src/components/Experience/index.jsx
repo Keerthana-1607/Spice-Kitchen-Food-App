@@ -5,10 +5,10 @@ const Experience = () => {
     <section className="experience-section" id="experience">
       
       <div className="experience-container">
+        
         <div className="experience-content">
-
           <span className="experience-subtitle">Our Story</span>
-
+          
           <h2 className="experience-title">
             Meet Chef <span>Arjun Kapoor</span>
           </h2>
@@ -36,6 +36,7 @@ const Experience = () => {
 
           </div>
         </div>
+
         <img
           src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&h=600&fit=crop"
           alt="Chef Arjun Kapoor"

@@ -1,13 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
 .header-bg {
+    width: 100%;
     background-color: black;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;   
-    padding: 15px 40px;
-    position:fixed;
-    width:96%;
+    padding: 12px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
 }
+
 .logo-name {
     font-size: 24px;
     font-weight: bold;
@@ -16,19 +25,31 @@
 .logo-name span {
     color: orange;
 }
+
 .nav-links {
     display: flex;
-    gap: 25px; 
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-links p {
     cursor: pointer;
     transition: color 0.3s ease;
+    font-size: 16px;
 }
 
 .nav-links p:hover {
     color: orange;
 }
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
 .book-table-btn {
     background-color: orange;
     color: black;
@@ -38,10 +59,30 @@
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s ease;
+    flex-shrink: 0;
 }
 
 .book-table-btn:hover {
     background-color: darkorange;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    color: orange;
+    flex-shrink: 0;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: orange;
+    color: black;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .popup {
@@ -53,27 +94,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     z-index: 999;
     padding: 15px;  
 }
+
 .popup-card {
-    background-color:black;
+    background-color: black;
     padding: 25px;
     border-radius: 15px;
     width: 100%;
     max-width: 350px;
-    color:white;
+    color: white;
     text-align: center;
-     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
-    
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
+
 .popup-card form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 15px;
 }
+
 .popup-card input,
 .popup-card select {
     width: 100%;
@@ -83,12 +125,14 @@
     outline: none;
     font-size: 14px;
     background: #1e1e1e;
-    color:white;
+    color: white;
 }
+
 .popup-card input:focus,
 .popup-card select:focus {
     border: 1px solid orange;
 }
+
 .popup-card button {
     margin-top: 10px;
     padding: 10px;
@@ -105,6 +149,7 @@
     background-color: darkorange;
     transform: scale(1.05);
 }
+
 .success-message h2 {
     color: orange;
     margin-bottom: 10px;
@@ -114,6 +159,59 @@
     color: #ccc;
     margin-bottom: 15px;
 }
+
+@media screen and (max-width: 768px) {
+    .header-bg {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo-name {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .nav-links {
+        gap: 10px;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .nav-links p {
+        font-size: 13px;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .book-table-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .cart-icon {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .header-bg {
+        padding: 15px 25px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .book-table-btn {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .popup-card {
         max-width: 400px;
@@ -130,32 +228,10 @@
         padding: 12px;
     }
 }
+
 @media screen and (min-width: 1024px) {
     .popup-card {
         max-width: 450px;
         padding: 35px;
     }
-}
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.cart-icon {
-    position: relative;
-    cursor: pointer;
-    color: orange;
-}
-
-.cart-badge {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: orange;
-    color: black;
-    border-radius: 50%;
-    padding: 2px 7px;
-    font-size: 12px;
-    font-weight: bold;
 }

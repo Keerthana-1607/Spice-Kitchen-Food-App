@@ -75,7 +75,7 @@ const Header =({cartList=[]})=>{
                         </>
                     ) : (
                         <div className="success-message">
-                        <h2>✅ Your table booked successfully</h2>
+                        <h2>Your table booked successfully</h2>
                         <p>We are excited to serve you</p>
 
                         <button onClick={() => {

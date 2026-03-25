@@ -1,7 +1,8 @@
 import './index.css'
 import { FaFacebook, FaInstagram, FaTwitter, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-const Contact=()=>{
-    return(
+
+const Contact = () => {
+    return (
         <footer className="footer" id="contact">
             <div className="footer-container">
 
@@ -10,7 +11,10 @@ const Contact=()=>{
                     {/* Brand */}
                     <div className="footer-brand">
                         <h3>Spice<span>Kitchen</span></h3>
-                        <p>Bringing authentic Indian flavours to your table since 2004. Every dish is a celebration of tradition.</p>
+                        <p>
+                            Bringing authentic Indian flavours to your table since 2004.
+                            Every dish is a celebration of tradition.
+                        </p>
 
                         <div className="social-icons">
                             <FaFacebook size={16} />
@@ -52,6 +56,7 @@ const Contact=()=>{
                     </div>
 
                 </div>
+
                 <div className="footer-bottom">
                     <p>© 2026 SpiceKitchen. All rights reserved.</p>
                 </div>
@@ -60,4 +65,5 @@ const Contact=()=>{
         </footer>
     )
 }
+
 export default Contact
