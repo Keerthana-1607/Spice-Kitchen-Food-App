@@ -16,9 +16,7 @@ const Gallery=()=>{
                 <span>Gallery</span>
                 <h2>From Our Kitchen</h2>
                 <p>A visual feast of flavours, colours, and culinary artistry.</p>
-                <div>
-
-                </div>
+                
             </div>
             <div>
                 {galleryImages.map(eachImage=>(
