@@ -13,13 +13,13 @@ const Header =({cartList=[]})=>{
         setIsBooked(true)
     }   
     const scrollToSection = (id) => {
-    if (location.pathname !== "/") {
-      // If not on home page, go to "/"
-      navigate("/", { state: { scrollToId: id } });
-    } else {
-      const section = document.getElementById(id);
-      section?.scrollIntoView({ behavior: "smooth" });
-    }
+        if (location.pathname !== "/") {
+        // If not on home page, go to "/"
+        navigate("/", { state: { scrollToId: id } });
+        } else {
+        const section = document.getElementById(id);
+        section?.scrollIntoView({ behavior: "smooth" });
+        }
   };
     const totalItems = cartList.reduce((acc, item) => acc + item.qty, 0)
     return(
@@ -30,7 +30,6 @@ const Header =({cartList=[]})=>{
                 <nav className='nav-links'>
                     <p onClick={() => scrollToSection("home")}>Home</p>
                     <p onClick={() => scrollToSection("menu")}>Menu</p>
-                    <p>About</p>
                     <p onClick={() => scrollToSection("experience")}>Experience</p>
                     <p onClick={() => scrollToSection("contact")}>Contact</p>
                                         
@@ -53,8 +52,11 @@ const Header =({cartList=[]})=>{
 
                     {!isBooked ? (
                         <>
-                        <h2>Book a Table</h2>
-
+                        <div>
+                            <h2>Book a Table</h2>
+                            <p className="close-btn" onClick={()=>setShowPopup(false)}>X</p> 
+                        </div>
+                        
                         <form onSubmit={submitBooking}>
                             <input type="text" placeholder="Your Name" required />
                             <input type="tel" placeholder="Phone Number" required />

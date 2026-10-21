@@ -1,11 +1,13 @@
+
+/* Menu Section */
 .menu-section {
     padding: 50px 20px;
     background-color: #111;
-    /* background-color: white; */
     color: white;
     text-align: center;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
+
 .menu-section span {
     color: orange;
     font-size: 16px;
@@ -20,18 +22,143 @@
     color: #ccc;
     margin-bottom: 30px;
 }
+
+/* Menu Grid - Mobile: 2 columns by default */
 .menu-list {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
 }
+
+/* Menu Card */
+.menu-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    min-width: 0;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Menu Image */
+.menu-image {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Menu Content */
+.menu-content {
+    padding: 12px;
+    text-align: center;
+}
+
+.dish-name {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: orange;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Order Button */
+.order-btn {
+    background-color: orange;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+}
+
+/* Quantity Controls */
+.qty-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.qty-container button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: orange;
+    color: black;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.qty-container button:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
+
+.qty-container p {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Tablet: 3 columns */
 @media screen and (min-width: 768px) {
     .menu-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .menu-image {
+        height: 200px;
+    }
+
+    .dish-name {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 16px;
     }
 }
+
+/* Laptop/Desktop: 4 columns */
 @media screen and (min-width: 1024px) {
     .menu-list {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .menu-image {
+        height: 235px;
+    }
+}
+
+/*very small screens: 1 column */
+@media screen and (max-width: 350px) {
+    .menu-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .menu-image {
+        height: 235px;
     }
 }

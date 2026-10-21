@@ -1,12 +1,12 @@
-import Cart from '../Cart'
+// import Cart from '../Cart'
 
-const CartPage = ({ cartList }) => {
-  return (
-    <div className="cart-page">
-      <h1>Your Cart</h1>
-      <Cart cartList={cartList} />
-    </div>
-  )
-}
+// const CartPage = ({ cartList,clearCart }) => {
+//   return (
+//     <div className="cart-page">
+//       {/* <h1>Your Cart</h1> */}
+//       <Cart cartList={cartList} clearCart={clearCart}/>
+//     </div>
+//   )
+// }
 
-export default CartPage
+// export default CartPage

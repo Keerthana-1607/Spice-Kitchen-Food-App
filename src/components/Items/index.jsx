@@ -1,24 +1,14 @@
 import './index.css'
-import { useState } from 'react'
+
 const Items = (props)=>{
     const{itemDetails,addToCart,decreaseCartQty, cartList=[]}=props
     const{id,image,currency,price,dishName}=itemDetails
-    // const [qty, setQty] = useState(0)
+    
 
     // Prevent undefined error
     const itemInCart = cartList.find(each => each.id === id) || null
     const qty = itemInCart ? itemInCart.qty : 0
-    // const increaseQty = () => {
-    //     setQty(prev => prev + 1)
-    // }
-
-    // const decreaseQty = () => {
-    //     if (qty > 1) {
-    //         setQty(prev => prev - 1)
-    //     } else {
-    //         setQty(0)   
-    //     }
-    // }
+    
     return(
         <div className="menu-card">
             <img src={image} alt={dishName} className="menu-image" />
@@ -40,11 +30,7 @@ const Items = (props)=>{
                         <p>{qty}</p>
                         <button onClick={() => addToCart(itemDetails)}>+</button>
                     </div>
-                    // <div className="qty-container">
-                    //     <button onClick={decreaseQty}>-</button>
-                    //     <p>{qty}</p>
-                    //     <button onClick={increaseQty}>+</button>
-                    // </div>
+                    
                 )}
             </div>
         </div>

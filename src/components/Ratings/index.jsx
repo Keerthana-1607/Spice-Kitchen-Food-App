@@ -66,8 +66,8 @@ const reviews = [
 const Ratings=()=>{
     return(
         <div className="reviews-container">
-            {reviews.map(each => (
-                <RatingsCard key={each.id} reviews={each} />
+            {reviews.map(eachReview => (
+                <RatingsCard key={eachReview.id} reviews={eachReview} />
             ))}
         </div>
     )

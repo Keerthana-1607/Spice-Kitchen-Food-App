@@ -1,7 +1,8 @@
 import { useEffect,useState } from 'react'
 import Items from '../Items'
-// import Cart from '../Cart'
 import './index.css'
+
+
 const Menu=({cartList=[],setCartList})=>{
     const [menuList, setMenuList] = useState([])
     // const [cartList, setCartList] = useState([])
@@ -63,12 +64,14 @@ const Menu=({cartList=[],setCartList})=>{
             </div>
             <div className="menu-list">
                 {menuList.map(eachItem => (
-                    <Items key={eachItem.id} itemDetails={eachItem}  addToCart={addToCart} decreaseCartQty={decreaseCartQty} cartList={cartList}/>
+                    <Items key={eachItem.id} 
+                        itemDetails={eachItem}  
+                        addToCart={addToCart} 
+                        decreaseCartQty={decreaseCartQty} 
+                        cartList={cartList}
+                    />
                 ))}
             </div>
-            {/* <Cart cartList={cartList}/>        */}
-
-
         </div>
 
     </section>

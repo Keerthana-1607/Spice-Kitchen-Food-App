@@ -23,7 +23,7 @@ const Hero = () => {
 
         <div className="hero-actions">
           <button className="btn primary-btn" onClick={()=>scrollToMenu("menu")}>Explore Menu</button>
-          <button className="btn secondary-btn">Order Now</button>
+          <button className="btn secondary-btn" onClick={()=>scrollToMenu('menu')}>Order Now</button>
         </div>
       </div>
 
